@@ -1,4 +1,7 @@
 \documentclass[12pt,a4paper]{article}
+\usepackage[a4paper]{geometry}
+\usepackage{array}
+\usepackage{hhline}
 \usepackage{graphics}
 \usepackage{csvsimple}
 \usepackage[russian,english]{babel}
@@ -7,19 +10,13 @@
 \usepackage{ulem}
 \usepackage{cmap}
 \usepackage{makecell}
-
-\usepackage{multirow}
+\setlength\extrarowheight{2pt}
+\setlength{\parindent}{0cm}
 \newcommand{\phylentry}[6] {\\\hline\makecell{
-#1
-}&
-\multirow{ 2}{*}{\makecell{
-#4
-}}&\multirow{ 2}{*}{\makecell{
-#5
-}}\\\cline{1-1}\makecell{
-#2\\
-#3
-}&&}
+#1\medskip\\
+\hhline{|-|}
+\\#2\\#3}
+&\makecell{#4}&\makecell{#5}}
 %Syntax: \phylentry{Who}{When}{Where}{Phylosophy}{NotPhylosophy}{ETC} // currently ETC is not used
 \hoffset -1.6cm 
 \textwidth  16.5cm 
