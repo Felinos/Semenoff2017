@@ -1,0 +1,48 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{graphics}
+\usepackage{csvsimple}
+\usepackage[russian,english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc} 
+\usepackage{ulem}
+\usepackage{cmap}
+\usepackage{makecell}
+
+\usepackage{multirow}
+\newcommand{\phylentry}[6] {\\\hline\makecell{
+#1
+}&
+\multirow{ 2}{*}{\makecell{
+#4
+}}&\multirow{ 2}{*}{\makecell{
+#5
+}}\\\cline{1-1}\makecell{
+#2\\
+#3
+}&&}
+%Syntax: \phylentry{Who}{When}{Where}{Phylosophy}{NotPhylosophy}{ETC} // currently ETC is not used
+\hoffset -1.6cm 
+\textwidth  16.5cm 
+\textheight 24cm 
+%\topmargin -1cm 
+\parskip 8pt 
+\setlength{\unitlength}{1cm}
+\sloppy
+\addto\captionsenglish{
+\renewcommand{\contentsname}{{\bf CO}ntents}
+\renewcommand{\refname}{Bibliography}
+\renewcommand{\figurename}{Figure}
+\renewcommand{\tablename}{Table}
+\renewcommand{\abstractname}{Abstract}
+\renewcommand{\partname}{Section}
+\renewcommand{\bottomfraction}{0.5}
+\renewcommand{\floatpagefraction}{0.4}
+\renewcommand{\textfloatsep}{0.5cm}
+\renewcommand{\intextsep}{0.6cm}
+\renewcommand{\floatsep}{0.3cm}
+}
+
+\renewcommand\theadalign{cb}
+\renewcommand\theadfont{\bfseries}
+\renewcommand\theadgape{\Gape[4pt]}
+\renewcommand\cellgape{\Gape[4pt]}
