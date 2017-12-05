@@ -10,12 +10,15 @@
 \usepackage{ulem}
 \usepackage{cmap}
 \usepackage{makecell}
+\usepackage{ifpdf}
 \setlength\extrarowheight{2pt}
 \setlength{\parindent}{0cm}
 \newcommand{\phylentry}[6] {\\\hline\makecell{
 #1\medskip\\
 \hhline{|-|}
-\\#2\\#3}
+\\#2\\#3\medskip\\
+\hhline{|-|}\\
+{#6}}
 &\makecell{#4}&\makecell{#5}}
 %Syntax: \phylentry{Who}{When}{Where}{Phylosophy}{NotPhylosophy}{ETC} // currently ETC is not used
 \hoffset -1.6cm 
@@ -43,3 +46,5 @@
 \renewcommand\theadfont{\bfseries}
 \renewcommand\theadgape{\Gape[4pt]}
 \renewcommand\cellgape{\Gape[4pt]}
+%<pics>
+\newcommand{\materialist}[0]{\includegraphics{dummy-achievement.png}}%</pics>
